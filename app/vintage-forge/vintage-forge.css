@@ -1,0 +1,420 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The Vintage Forge Theme - Deep Antique with Copper */
+
+.vintage-forge-theme {
+  font-family: var(--font-cinzel);
+  background: #F5F1E8;
+  color: #3D2F2F;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 4rem;
+}
+
+/* Aged Copper and Cream/Ivory Color Variables */
+.vintage-forge-theme {
+  --copper-aged: #8B6F47;
+  --copper-patina: #A67C52;
+  --copper-bright: #B87333;
+  --cream-base: #F5F1E8;
+  --ivory: #FAF8F3;
+  --aged-brown: #5C4A3A;
+  --sepia: #8B7355;
+}
+
+/* Removed background pattern - solid color only */
+
+.vintage-forge-theme h1,
+.vintage-forge-theme h2,
+.vintage-forge-theme h3,
+.vintage-forge-theme h4,
+.vintage-forge-theme h5,
+.vintage-forge-theme h6 {
+  font-family: var(--font-cinzel);
+  color: #5C4A3A;
+  font-weight: 600;
+}
+
+.vintage-forge-theme .hero-section {
+  background: linear-gradient(to bottom right, rgba(139, 111, 71, 0.15), rgba(245, 241, 232, 0.6), rgba(166, 124, 82, 0.1));
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Ornate Victorian Border for Hero */
+.vintage-forge-theme .hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,150 Q75,100 150,150 T300,150' stroke='%238B6F47' stroke-width='2' fill='none' opacity='0.2'/%3E%3Cpath d='M150,0 Q100,75 150,150 T150,300' stroke='%238B6F47' stroke-width='2' fill='none' opacity='0.2'/%3E%3Ccircle cx='75' cy='150' r='4' fill='%238B6F47' opacity='0.2'/%3E%3Ccircle cx='225' cy='150' r='4' fill='%238B6F47' opacity='0.2'/%3E%3Cpath d='M50,50 Q70,70 90,50' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.15'/%3E%3Cpath d='M210,50 Q230,70 250,50' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.vintage-forge-theme .hero-image-container {
+  width: 100%;
+  max-width: 4xl;
+  height: 24rem;
+  background: rgba(250, 248, 243, 0.9);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px -4px rgba(139, 111, 71, 0.2), 0 4px 8px -2px rgba(139, 111, 71, 0.15), inset 0 0 0 2px rgba(139, 111, 71, 0.1);
+  border: 3px solid #8B6F47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+/* Ornate Corner Decorations */
+.vintage-forge-theme .hero-image-container::before,
+.vintage-forge-theme .hero-image-container::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #8B6F47;
+  opacity: 0.4;
+}
+
+.vintage-forge-theme .hero-image-container::before {
+  top: -5px;
+  left: -5px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+}
+
+.vintage-forge-theme .hero-image-container::after {
+  bottom: -5px;
+  right: -5px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+}
+
+.vintage-forge-theme .hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.vintage-forge-theme .hero-subtitle {
+  font-size: 1.25rem;
+  color: #8B7355;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.vintage-forge-theme .philosophy-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.vintage-forge-theme .philosophy-card {
+  background: #FAF8F3;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  box-shadow: 0 8px 16px -4px rgba(139, 111, 71, 0.2), 0 4px 8px -2px rgba(139, 111, 71, 0.15);
+  border: 3px solid #8B6F47;
+  position: relative;
+  z-index: 10;
+  background-image: 
+    linear-gradient(to right, rgba(139, 111, 71, 0.05) 0%, transparent 5%, transparent 95%, rgba(139, 111, 71, 0.05) 100%),
+    linear-gradient(to bottom, rgba(139, 111, 71, 0.05) 0%, transparent 5%, transparent 95%, rgba(139, 111, 71, 0.05) 100%);
+}
+
+/* Ornate Border Pattern */
+.vintage-forge-theme .philosophy-card::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 Q25,40 50,50 T100,50' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M50,0 Q40,25 50,50 T50,100' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='25' cy='50' r='2' fill='%238B6F47' opacity='0.2'/%3E%3Ccircle cx='75' cy='50' r='2' fill='%238B6F47' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .philosophy-card {
+    padding: 3rem;
+  }
+}
+
+.vintage-forge-theme .philosophy-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .philosophy-title {
+    font-size: 3rem;
+  }
+}
+
+.vintage-forge-theme .philosophy-text {
+  font-size: 1.125rem;
+  color: #5C4A3A;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.vintage-forge-theme .gallery-section {
+  padding: 4rem 1rem;
+}
+
+.vintage-forge-theme .gallery-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.vintage-forge-theme .gallery-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .gallery-title {
+    font-size: 3rem;
+  }
+}
+
+.vintage-forge-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.vintage-forge-theme .gallery-item {
+  background: #FAF8F3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px -4px rgba(139, 111, 71, 0.2), 0 4px 8px -2px rgba(139, 111, 71, 0.15);
+  border: 3px solid #8B6F47;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+.vintage-forge-theme .gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px -4px rgba(139, 111, 71, 0.3), 0 6px 12px -2px rgba(139, 111, 71, 0.2);
+}
+
+.vintage-forge-theme .gallery-image {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom right, rgba(139, 111, 71, 0.2), rgba(245, 241, 232, 0.7), rgba(166, 124, 82, 0.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vintage-forge-theme .gallery-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  text-align: center;
+  padding: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Navigation Bar Styling for Vintage Forge */
+.navbar-vintage-forge {
+  background: rgba(245, 241, 232, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(139, 111, 71, 0.3);
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 8px rgba(139, 111, 71, 0.1);
+}
+
+.navbar-vintage-forge .navbar-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-vintage-forge .navbar-link {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-family: var(--font-cinzel);
+  font-size: 0.875rem;
+  color: #8B7355;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  letter-spacing: 0.03em;
+}
+
+.navbar-vintage-forge .navbar-link:hover {
+  background: rgba(139, 111, 71, 0.1);
+  color: #5C4A3A;
+  border-color: rgba(139, 111, 71, 0.3);
+}
+
+.navbar-vintage-forge .navbar-link-active {
+  background: rgba(139, 111, 71, 0.15);
+  color: #5C4A3A;
+  border: 2px solid #8B6F47;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(139, 111, 71, 0.2);
+}
+
+/* Contact Form Styling for Vintage Forge */
+.vintage-forge-theme .contact-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.vintage-forge-theme .contact-container {
+  background: #FAF8F3;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  box-shadow: 0 8px 16px -4px rgba(139, 111, 71, 0.2), 0 4px 8px -2px rgba(139, 111, 71, 0.15);
+  border: 3px solid #8B6F47;
+  position: relative;
+  z-index: 10;
+  background-image: 
+    linear-gradient(to right, rgba(139, 111, 71, 0.05) 0%, transparent 5%, transparent 95%, rgba(139, 111, 71, 0.05) 100%),
+    linear-gradient(to bottom, rgba(139, 111, 71, 0.05) 0%, transparent 5%, transparent 95%, rgba(139, 111, 71, 0.05) 100%);
+}
+
+/* Ornate Border Pattern */
+.vintage-forge-theme .contact-container::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 Q25,40 50,50 T100,50' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M50,0 Q40,25 50,50 T50,100' stroke='%238B6F47' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='25' cy='50' r='2' fill='%238B6F47' opacity='0.2'/%3E%3Ccircle cx='75' cy='50' r='2' fill='%238B6F47' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.vintage-forge-theme .contact-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .vintage-forge-theme .contact-title {
+    font-size: 3rem;
+  }
+}
+
+.vintage-forge-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vintage-forge-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vintage-forge-theme .form-label {
+  font-family: var(--font-cinzel);
+  font-size: 1.125rem;
+  color: #5C4A3A;
+  font-weight: 600;
+}
+
+.vintage-forge-theme .form-input,
+.vintage-forge-theme .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid #8B6F47;
+  background: #FAF8F3;
+  color: #5C4A3A;
+  font-family: var(--font-cinzel);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.vintage-forge-theme .form-input:focus,
+.vintage-forge-theme .form-textarea:focus {
+  outline: none;
+  border-color: #A67C52;
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  background: #FFFFFF;
+}
+
+.vintage-forge-theme .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.vintage-forge-theme .form-button {
+  padding: 0.875rem 2rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(to bottom, #A67C52, #8B6F47);
+  border: 2px solid #8B6F47;
+  color: #FAF8F3;
+  font-family: var(--font-cinzel);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(139, 111, 71, 0.25);
+}
+
+.vintage-forge-theme .form-button:hover {
+  background: linear-gradient(to bottom, #8B6F47, #6B5537);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(139, 111, 71, 0.35);
+}
+

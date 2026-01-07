@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heirloom Pantry Theme - Complete Styling */
+
+.heirloom-theme {
+  font-family: var(--font-libre-baskerville);
+  background: #FAF8F3;
+  color: #3D2F2F;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 4rem;
+}
+
+/* Full Page Lace Background with Parchment Texture - More Frilly */
+.heirloom-theme::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 Q20,30 40,40 T80,40' stroke='%23D4A5A5' stroke-width='2' fill='none' opacity='0.1'/%3E%3Cpath d='M0,40 Q20,50 40,40 T80,40' stroke='%23D4A5A5' stroke-width='2' fill='none' opacity='0.1'/%3E%3Ccircle cx='20' cy='40' r='4' fill='%23D4A5A5' opacity='0.1'/%3E%3Ccircle cx='60' cy='40' r='4' fill='%23D4A5A5' opacity='0.1'/%3E%3Cpath d='M40,0 Q30,20 40,40 T40,80' stroke='%23D4A5A5' stroke-width='2' fill='none' opacity='0.1'/%3E%3Cpath d='M40,0 Q50,20 40,40 T40,80' stroke='%23D4A5A5' stroke-width='2' fill='none' opacity='0.1'/%3E%3Cpath d='M10,20 Q15,25 20,20 Q25,15 30,20' stroke='%23D4A5A5' stroke-width='1.5' fill='none' opacity='0.08'/%3E%3Cpath d='M50,20 Q55,25 60,20 Q65,15 70,20' stroke='%23D4A5A5' stroke-width='1.5' fill='none' opacity='0.08'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 80px 80px, 400px 400px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+
+.heirloom-theme h1,
+.heirloom-theme h2,
+.heirloom-theme h3,
+.heirloom-theme h4,
+.heirloom-theme h5,
+.heirloom-theme h6 {
+  font-family: var(--font-young-serif);
+  color: #3D2F2F;
+}
+
+.heirloom-theme .hero-section {
+  background: linear-gradient(to bottom right, rgba(244, 230, 231, 0.3), rgba(250, 248, 243, 0.5), rgba(212, 165, 165, 0.2));
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heirloom-theme .hero-image-container {
+  width: 100%;
+  max-width: 4xl;
+  height: 24rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(212, 165, 165, 0.1), 0 2px 4px -1px rgba(212, 165, 165, 0.06);
+  border: 1px solid #E8D5D6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+/* Removed lace border from hero - now full page background */
+
+.heirloom-theme .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3D2F2F;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.heirloom-theme .hero-subtitle {
+  font-size: 1.25rem;
+  color: #6B5B5B;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.heirloom-theme .philosophy-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.heirloom-theme .philosophy-card {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(212, 165, 165, 0.1), 0 2px 4px -1px rgba(212, 165, 165, 0.06);
+  border: 2px solid #E8D5D6;
+  position: relative;
+  z-index: 10;
+}
+
+/* Removed lace border from philosophy card */
+
+@media (min-width: 768px) {
+  .heirloom-theme .philosophy-card {
+    padding: 3rem;
+  }
+}
+
+.heirloom-theme .philosophy-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #3D2F2F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .philosophy-title {
+    font-size: 3rem;
+  }
+}
+
+.heirloom-theme .philosophy-text {
+  font-size: 1.125rem;
+  color: #6B5B5B;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.heirloom-theme .gallery-section {
+  padding: 4rem 1rem;
+}
+
+.heirloom-theme .gallery-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.heirloom-theme .gallery-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #3D2F2F;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .gallery-title {
+    font-size: 3rem;
+  }
+}
+
+.heirloom-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.heirloom-theme .gallery-item {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(212, 165, 165, 0.1), 0 2px 4px -1px rgba(212, 165, 165, 0.06);
+  border: 2px solid #E8D5D6;
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+/* Removed decorative corners from gallery items */
+
+.heirloom-theme .gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.heirloom-theme .gallery-image {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom right, rgba(244, 230, 231, 0.4), rgba(250, 248, 243, 0.6), rgba(212, 165, 165, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heirloom-theme .gallery-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3D2F2F;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navigation Bar Styling for Heirloom */
+.navbar-heirloom {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(232, 213, 214, 0.5);
+  padding: 0.75rem 0;
+}
+
+.navbar-heirloom .navbar-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-heirloom .navbar-link {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-family: var(--font-libre-baskerville);
+  font-size: 0.875rem;
+  color: #6B5B5B;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.navbar-heirloom .navbar-link:hover {
+  background: rgba(244, 230, 231, 0.5);
+  color: #3D2F2F;
+}
+
+.navbar-heirloom .navbar-link-active {
+  background: rgba(244, 230, 231, 0.7);
+  color: #3D2F2F;
+  border-color: #E8D5D6;
+  font-weight: 600;
+}
+
+/* Contact Form Styling for Heirloom - Frilly */
+.heirloom-theme .contact-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.heirloom-theme .contact-container {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(212, 165, 165, 0.1), 0 2px 4px -1px rgba(212, 165, 165, 0.06);
+  border: 2px solid #E8D5D6;
+  position: relative;
+  z-index: 10;
+}
+
+/* Removed lace border from contact form */
+
+.heirloom-theme .contact-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #3D2F2F;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heirloom-theme .contact-title {
+    font-size: 3rem;
+  }
+}
+
+.heirloom-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heirloom-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.heirloom-theme .form-label {
+  font-family: var(--font-young-serif);
+  font-size: 1.125rem;
+  color: #3D2F2F;
+  font-weight: 600;
+}
+
+.heirloom-theme .form-input,
+.heirloom-theme .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #E8D5D6;
+  background: #FAF8F3;
+  color: #3D2F2F;
+  font-family: var(--font-libre-baskerville);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.heirloom-theme .form-input:focus,
+.heirloom-theme .form-textarea:focus {
+  outline: none;
+  border-color: #D4A5A5;
+  box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.1);
+  background: #FFFFFF;
+}
+
+.heirloom-theme .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.heirloom-theme .form-button {
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to bottom, #F4E6E7, #E8D5D6);
+  border: 2px solid #D4A5A5;
+  color: #3D2F2F;
+  font-family: var(--font-young-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(212, 165, 165, 0.2);
+}
+
+.heirloom-theme .form-button:hover {
+  background: linear-gradient(to bottom, #E8D5D6, #D4A5A5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(212, 165, 165, 0.3);
+}
+

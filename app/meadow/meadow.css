@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Meadow & Mill Theme - Complete Styling */
+
+.meadow-theme {
+  font-family: var(--font-quicksand);
+  background: #F5E6D3;
+  color: #2D3A2A;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 4rem;
+}
+
+/* Removed gingham pattern background - keeping original background color */
+
+.meadow-theme h1,
+.meadow-theme h2,
+.meadow-theme h3,
+.meadow-theme h4,
+.meadow-theme h5,
+.meadow-theme h6 {
+  font-family: var(--font-arvo);
+  color: #2D3A2A;
+}
+
+.meadow-theme .hero-section {
+  background: linear-gradient(to bottom right, rgba(135, 169, 107, 0.25), rgba(232, 240, 227, 0.6), rgba(168, 196, 138, 0.2));
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.meadow-theme .hero-image-container {
+  width: 100%;
+  max-width: 4xl;
+  height: 24rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  box-shadow: 0 8px 16px -4px rgba(135, 169, 107, 0.2), 0 4px 8px -2px rgba(135, 169, 107, 0.15);
+  border: 2px solid #A8C48A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+.meadow-theme .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2D3A2A;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.meadow-theme .hero-subtitle {
+  font-size: 1.25rem;
+  color: #5A6B55;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.meadow-theme .philosophy-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.meadow-theme .philosophy-card {
+  background: #FFFFFF;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  padding: 3rem;
+  box-shadow: 0 8px 16px -4px rgba(135, 169, 107, 0.2), 0 4px 8px -2px rgba(135, 169, 107, 0.15);
+  border: 2px solid #A8C48A;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .philosophy-card {
+    padding: 3rem;
+  }
+}
+
+.meadow-theme .philosophy-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2D3A2A;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .philosophy-title {
+    font-size: 3rem;
+  }
+}
+
+.meadow-theme .philosophy-text {
+  font-size: 1.125rem;
+  color: #5A6B55;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.meadow-theme .gallery-section {
+  padding: 4rem 1rem;
+}
+
+.meadow-theme .gallery-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.meadow-theme .gallery-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2D3A2A;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .gallery-title {
+    font-size: 3rem;
+  }
+}
+
+.meadow-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.meadow-theme .gallery-item {
+  background: #FFFFFF;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px -4px rgba(135, 169, 107, 0.2), 0 4px 8px -2px rgba(135, 169, 107, 0.15);
+  border: 2px solid #A8C48A;
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+.meadow-theme .gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.meadow-theme .gallery-image {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom right, rgba(135, 169, 107, 0.4), rgba(245, 230, 211, 0.7), rgba(168, 196, 138, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meadow-theme .gallery-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D3A2A;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Botanical Border Decorations */
+.meadow-theme .hero-section,
+.meadow-theme .philosophy-card,
+.meadow-theme .gallery-item {
+  position: relative;
+}
+
+.meadow-theme .hero-section::before,
+.meadow-theme .philosophy-card::before,
+.meadow-theme .gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q20,40 30,50 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M50,10 Q40,20 50,30 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='50' r='2' fill='%2387A96B' opacity='0.2'/%3E%3Ccircle cx='80' cy='50' r='2' fill='%2387A96B' opacity='0.2'/%3E%3Cpath d='M50,10 Q60,20 50,30 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M10,50 Q20,60 30,50 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+.meadow-theme .philosophy-card::before {
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+}
+
+.meadow-theme .gallery-item::before {
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+}
+
+/* Navigation Bar Styling for Meadow */
+.navbar-meadow {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(196, 212, 184, 0.5);
+  padding: 0.75rem 0;
+}
+
+.navbar-meadow .navbar-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-meadow .navbar-link {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  text-decoration: none;
+  font-family: var(--font-quicksand);
+  font-size: 0.875rem;
+  color: #5A6B55;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.navbar-meadow .navbar-link:hover {
+  background: rgba(135, 169, 107, 0.25);
+  color: #2D3A2A;
+}
+
+.navbar-meadow .navbar-link-active {
+  background: rgba(135, 169, 107, 0.35);
+  color: #2D3A2A;
+  border-color: #A8C48A;
+  font-weight: 600;
+}
+
+/* Contact Form Styling for Meadow */
+.meadow-theme .contact-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.meadow-theme .contact-container {
+  background: #FFFFFF;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  padding: 3rem;
+  box-shadow: 0 8px 16px -4px rgba(135, 169, 107, 0.2), 0 4px 8px -2px rgba(135, 169, 107, 0.15);
+  border: 2px solid #A8C48A;
+  position: relative;
+  z-index: 10;
+}
+
+/* Botanical border around form */
+.meadow-theme .contact-container::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q20,40 30,50 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M50,10 Q40,20 50,30 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='50' r='2' fill='%2387A96B' opacity='0.2'/%3E%3Ccircle cx='80' cy='50' r='2' fill='%2387A96B' opacity='0.2'/%3E%3Cpath d='M50,10 Q60,20 50,30 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Cpath d='M10,50 Q20,60 30,50 T50,50' stroke='%2387A96B' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.35;
+  border-radius: 0.875rem 1.625rem 0.625rem 1.375rem;
+}
+
+.meadow-theme .contact-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2D3A2A;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .meadow-theme .contact-title {
+    font-size: 3rem;
+  }
+}
+
+.meadow-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.meadow-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meadow-theme .form-label {
+  font-family: var(--font-arvo);
+  font-size: 1.125rem;
+  color: #2D3A2A;
+  font-weight: 700;
+}
+
+.meadow-theme .form-input,
+.meadow-theme .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  border: 2px solid #A8C48A;
+  background: #E8F0E3;
+  color: #2D3A2A;
+  font-family: var(--font-quicksand);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.meadow-theme .form-input:focus,
+.meadow-theme .form-textarea:focus {
+  outline: none;
+  border-color: #87A96B;
+  box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.15);
+  background: #FFFFFF;
+}
+
+.meadow-theme .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.meadow-theme .form-button {
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem 1.5rem 0.5rem 1.25rem;
+  background: linear-gradient(to bottom, #A8C48A, #87A96B);
+  border: 2px solid #87A96B;
+  color: #2D3A2A;
+  font-family: var(--font-arvo);
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(135, 169, 107, 0.25);
+}
+
+.meadow-theme .form-button:hover {
+  background: linear-gradient(to bottom, #87A96B, #6B8A55);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(135, 169, 107, 0.35);
+}
+

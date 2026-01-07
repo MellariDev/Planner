@@ -1,0 +1,414 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The Rustic Edge Theme - Dark Rock */
+
+.rustic-edge-theme {
+  font-family: var(--font-roboto-slab);
+  background: #0A0A0A;
+  color: #E0E0E0;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 4rem;
+}
+
+/* Rock Color Variables - Black & Grey */
+.rustic-edge-theme {
+  --rock-black: #000000;
+  --rock-dark: #0A0A0A;
+  --rock-charcoal: #1A1A1A;
+  --rock-gray: #2C2C2C;
+  --rock-light-gray: #3D3D3D;
+  --accent-copper: #8B6F47;
+  --accent-bright: #A67C52;
+  --text-light: #E0E0E0;
+  --text-muted: #9A9A9A;
+  --text-dark: #666666;
+}
+
+/* Removed background pattern - solid color only */
+
+.rustic-edge-theme h1,
+.rustic-edge-theme h2,
+.rustic-edge-theme h3,
+.rustic-edge-theme h4,
+.rustic-edge-theme h5,
+.rustic-edge-theme h6 {
+  font-family: var(--font-bebas-neue);
+  color: #E0E0E0;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.rustic-edge-theme .hero-section {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.95), rgba(10, 10, 10, 0.98), rgba(26, 26, 26, 0.9));
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Rock-inspired texture overlay */
+.rustic-edge-theme .hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' fill='%231A1A1A'/%3E%3Cpath d='M0,50 L100,50' stroke='%232C2C2C' stroke-width='1' opacity='0.3'/%3E%3Cpath d='M50,0 L50,100' stroke='%232C2C2C' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.rustic-edge-theme .hero-image-container {
+  width: 100%;
+  max-width: 4xl;
+  height: 24rem;
+  background: rgba(26, 26, 26, 0.95);
+  border-radius: 0;
+  box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.9), 0 4px 15px -2px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(139, 111, 71, 0.2);
+  border: 2px solid #2C2C2C;
+  border-top: 3px solid #3D3D3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+/* Rock-inspired corner accents - subtle */
+.rustic-edge-theme .hero-image-container::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, transparent 48%, #8B6F47 49%, #8B6F47 51%, transparent 52%);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.rustic-edge-theme .hero-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .hero-title {
+    font-size: 5rem;
+  }
+}
+
+.rustic-edge-theme .hero-subtitle {
+  font-size: 1.125rem;
+  color: #9A9A9A;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-family: var(--font-roboto-slab);
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .hero-subtitle {
+    font-size: 1.375rem;
+  }
+}
+
+.rustic-edge-theme .philosophy-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.rustic-edge-theme .philosophy-card {
+  background: #1A1A1A;
+  border-radius: 0;
+  padding: 3rem;
+  box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.9), 0 4px 15px -2px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(139, 111, 71, 0.15);
+  border: 2px solid #2C2C2C;
+  border-top: 3px solid #3D3D3D;
+  position: relative;
+  z-index: 10;
+  background-image: 
+    linear-gradient(to right, rgba(44, 44, 44, 0.3) 0%, transparent 5%, transparent 95%, rgba(44, 44, 44, 0.3) 100%),
+    linear-gradient(to bottom, rgba(44, 44, 44, 0.3) 0%, transparent 5%, transparent 95%, rgba(44, 44, 44, 0.3) 100%);
+}
+
+/* Removed ornate antique pattern - keeping it rock-focused */
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .philosophy-card {
+    padding: 3rem;
+  }
+}
+
+.rustic-edge-theme .philosophy-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .philosophy-title {
+    font-size: 3.5rem;
+  }
+}
+
+.rustic-edge-theme .philosophy-text {
+  font-size: 1.125rem;
+  color: #9A9A9A;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-family: var(--font-roboto-slab);
+}
+
+.rustic-edge-theme .gallery-section {
+  padding: 4rem 1rem;
+}
+
+.rustic-edge-theme .gallery-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.rustic-edge-theme .gallery-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .gallery-title {
+    font-size: 3.5rem;
+  }
+}
+
+.rustic-edge-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.rustic-edge-theme .gallery-item {
+  background: #1A1A1A;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.9), 0 4px 15px -2px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(139, 111, 71, 0.15);
+  border: 2px solid #2C2C2C;
+  border-top: 3px solid #3D3D3D;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+.rustic-edge-theme .gallery-item:hover {
+  transform: scale(1.05);
+  border-color: #3D3D3D;
+  box-shadow: 0 15px 50px -5px rgba(0, 0, 0, 0.95), 0 6px 20px -2px rgba(0, 0, 0, 0.8), 0 0 15px rgba(139, 111, 71, 0.2);
+}
+
+.rustic-edge-theme .gallery-image {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rustic-edge-theme .gallery-item-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  text-align: center;
+  padding: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-bebas-neue);
+}
+
+/* Navigation Bar Styling for Rustic Edge */
+.navbar-rustic-edge {
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(44, 44, 44, 0.8);
+  padding: 0.75rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-rustic-edge .navbar-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-rustic-edge .navbar-link {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: var(--font-bebas-neue);
+  font-size: 0.875rem;
+  color: #9A9A9A;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.navbar-rustic-edge .navbar-link:hover {
+  background: rgba(44, 44, 44, 0.5);
+  color: #E0E0E0;
+  border-color: rgba(61, 61, 61, 0.6);
+}
+
+.navbar-rustic-edge .navbar-link-active {
+  background: rgba(44, 44, 44, 0.7);
+  color: #E0E0E0;
+  border: 2px solid #3D3D3D;
+  border-top: 3px solid #3D3D3D;
+  font-weight: 400;
+  box-shadow: 0 0 10px rgba(139, 111, 71, 0.2);
+}
+
+/* Contact Form Styling for Rustic Edge */
+.rustic-edge-theme .contact-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.rustic-edge-theme .contact-container {
+  background: #1A1A1A;
+  border-radius: 0;
+  padding: 3rem;
+  box-shadow: 0 10px 40px -5px rgba(0, 0, 0, 0.9), 0 4px 15px -2px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(139, 111, 71, 0.15);
+  border: 2px solid #2C2C2C;
+  border-top: 3px solid #3D3D3D;
+  position: relative;
+  z-index: 10;
+  background-image: 
+    linear-gradient(to right, rgba(44, 44, 44, 0.3) 0%, transparent 5%, transparent 95%, rgba(44, 44, 44, 0.3) 100%),
+    linear-gradient(to bottom, rgba(44, 44, 44, 0.3) 0%, transparent 5%, transparent 95%, rgba(44, 44, 44, 0.3) 100%);
+}
+
+.rustic-edge-theme .contact-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+  .rustic-edge-theme .contact-title {
+    font-size: 3.5rem;
+  }
+}
+
+.rustic-edge-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rustic-edge-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rustic-edge-theme .form-label {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.125rem;
+  color: #E0E0E0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.rustic-edge-theme .form-input,
+.rustic-edge-theme .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0;
+  border: 2px solid #2C2C2C;
+  border-top: 3px solid #3D3D3D;
+  background: #0A0A0A;
+  color: #E0E0E0;
+  font-family: var(--font-roboto-slab);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.rustic-edge-theme .form-input:focus,
+.rustic-edge-theme .form-textarea:focus {
+  outline: none;
+  border-color: #3D3D3D;
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  background: #1A1A1A;
+}
+
+.rustic-edge-theme .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.rustic-edge-theme .form-button {
+  padding: 0.875rem 2rem;
+  border-radius: 0;
+  background: linear-gradient(to bottom, #2C2C2C, #1A1A1A);
+  border: 2px solid #3D3D3D;
+  border-top: 3px solid #3D3D3D;
+  color: #E0E0E0;
+  font-family: var(--font-bebas-neue);
+  font-size: 1.125rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.rustic-edge-theme .form-button:hover {
+  background: linear-gradient(to bottom, #3D3D3D, #2C2C2C);
+  border-color: #8B6F47;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 0 0 10px rgba(139, 111, 71, 0.2);
+}
+

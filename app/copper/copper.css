@@ -1,0 +1,398 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Copper Whisk Theme - Complete Styling */
+
+.copper-theme {
+  font-family: var(--font-courier-prime);
+  background: #1A2332;
+  color: #F5F5F5;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 4rem;
+}
+
+/* No background pattern - solid color only */
+
+/* Gold Color Variables */
+.copper-theme {
+  --gold-primary: #D4AF37;
+  --gold-secondary: #C9A961;
+  --gold-accent: #F4D03F;
+  --copper-primary: #B87333;
+  --copper-secondary: #804a00;
+}
+
+.copper-theme h1,
+.copper-theme h2,
+.copper-theme h3,
+.copper-theme h4,
+.copper-theme h5,
+.copper-theme h6 {
+  font-family: var(--font-playfair);
+  font-weight: 900;
+  color: #F5F5F5;
+}
+
+.copper-theme .hero-section {
+  background: linear-gradient(to bottom right, rgba(26, 35, 50, 0.8), rgba(44, 62, 80, 0.9), rgba(184, 115, 51, 0.2));
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.copper-theme .hero-image-container {
+  width: 100%;
+  max-width: 4xl;
+  height: 24rem;
+  background: rgba(44, 62, 80, 0.9);
+  border-radius: 0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.2);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+.copper-theme .hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #F5F5F5;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .copper-theme .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.copper-theme .hero-subtitle {
+  font-size: 1.25rem;
+  color: #B8BCC4;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .copper-theme .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.copper-theme .philosophy-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.copper-theme .philosophy-card {
+  background: #2C3E50;
+  border-radius: 0;
+  padding: 3rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.15);
+  border: 2px solid rgba(212, 175, 55, 0.25);
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .copper-theme .philosophy-card {
+    padding: 3rem;
+  }
+}
+
+.copper-theme .philosophy-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #F5F5F5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .copper-theme .philosophy-title {
+    font-size: 3rem;
+  }
+}
+
+.copper-theme .philosophy-text {
+  font-size: 1.125rem;
+  color: #B8BCC4;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.copper-theme .gallery-section {
+  padding: 4rem 1rem;
+}
+
+.copper-theme .gallery-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.copper-theme .gallery-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #F5F5F5;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .copper-theme .gallery-title {
+    font-size: 3rem;
+  }
+}
+
+.copper-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .copper-theme .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.copper-theme .gallery-item {
+  background: #2C3E50;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.15);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s, border-color 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+.copper-theme .gallery-item:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.copper-theme .gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.copper-theme .gallery-image {
+  aspect-ratio: 1;
+  background: linear-gradient(to bottom right, rgba(26, 35, 50, 0.6), rgba(44, 62, 80, 0.8), rgba(184, 115, 51, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copper-theme .gallery-item-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Copper Foil Button Effect with Gold */
+.copper-foil-button {
+  background: linear-gradient(45deg, #D4AF37, #B87333, #804a00);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.copper-foil-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Gold Accent Highlights */
+.copper-theme .hero-title {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.copper-theme .philosophy-title,
+.copper-theme .gallery-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+/* Navigation Bar Styling for Copper */
+.navbar-copper {
+  background: rgba(26, 35, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-copper .navbar-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-copper .navbar-link {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: var(--font-courier-prime);
+  font-size: 0.875rem;
+  color: #B8BCC4;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar-copper .navbar-link:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: #F4D03F;
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.navbar-copper .navbar-link-active {
+  background: linear-gradient(45deg, rgba(212, 175, 55, 0.2), rgba(184, 115, 51, 0.2));
+  color: #F4D03F;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* Contact Form Styling for Copper */
+.copper-theme .contact-section {
+  padding: 4rem 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.copper-theme .contact-container {
+  background: #2C3E50;
+  border-radius: 0;
+  padding: 3rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.15);
+  border: 2px solid rgba(212, 175, 55, 0.25);
+  position: relative;
+  z-index: 10;
+}
+
+.copper-theme .contact-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #F5F5F5;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+@media (min-width: 768px) {
+  .copper-theme .contact-title {
+    font-size: 3rem;
+  }
+}
+
+.copper-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.copper-theme .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.copper-theme .form-label {
+  font-family: var(--font-playfair);
+  font-size: 1.125rem;
+  color: #F4D03F;
+  font-weight: 900;
+}
+
+.copper-theme .form-input,
+.copper-theme .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  background: #1A2332;
+  color: #F5F5F5;
+  font-family: var(--font-courier-prime);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.copper-theme .form-input:focus,
+.copper-theme .form-textarea:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  background: #2C3E50;
+}
+
+.copper-theme .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.copper-theme .form-button {
+  padding: 0.875rem 2rem;
+  border-radius: 0;
+  background: linear-gradient(45deg, #D4AF37, #B87333, #804a00);
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  color: #FFFFFF;
+  font-family: var(--font-playfair);
+  font-size: 1.125rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.copper-theme .form-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+  animation: shine 3s infinite;
+}
+
+.copper-theme .form-button:hover {
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
